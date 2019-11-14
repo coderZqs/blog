@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>app</title>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+  </noscript>
+  <script>
+    function IsPC() {
+      var userAgentInfo = navigator.userAgent;
+      var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+      var flag = true;
+      for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+          flag = false;
+          break;
+        }
+      }
+      return flag;
+    }
+
+    function px2rem(by_layout_width, docuemnt_fontSize) {
+      var docElement = document.documentElement;
+      /* var clientWidthValue = docElement.clientWidth > by_layout_width ? by_layout_width : docElement.clientWidth; */
+      docElement.style.fontSize = docuemnt_fontSize * (docElement.clientWidth / 375) + 'px';
+      console.log(docuemnt_fontSize * (docElement.clientWidth / 375) + 'px')
+    }
+    px2rem(750, 14);
+    window.addEventListener("resize", () => {
+      px2rem(750, 14);
+    })
+  </script>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>
