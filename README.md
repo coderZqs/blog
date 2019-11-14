@@ -1,29 +1,28 @@
-# app
+# 个人博客网站（未完成）
 
-## Project setup
+
+## 项目功能实现
+
+### 首页实现
+### 天气预报
+### 文章阅读和书写
+### 备忘录
+
+
+
+## 项目设置
+### 下载npm包
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 项目运行
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 项目打包
 ```
 npm run build
 ```
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
